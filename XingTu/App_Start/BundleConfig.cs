@@ -28,20 +28,22 @@ namespace XingTu
                       "~/Content/site.css"));
 
             //行途css
-            bundles.Add(new ScriptBundle("~/Content/xtCss").Include("~/Content/css/commond.css", "~/Content/css/page.css", "~/Content/css/page2.css", "~/Content/css/style.css"));
+            bundles.Add(new StyleBundle("~/Content/xtCss").Include("~/Content/css/commond.css",  "~/Content/css/page2.css", "~/Content/css/style.css"));            
             //行途js
-            bundles.Add(new ScriptBundle("~/bundles/xtjs").Include("~/Scripts/js/jquery-1.8.3.min.js", 
-                     "~/Scripts/js/bdSlide.js", 
-                     "~/Scripts/js/ck.js", 
-                     "~/Scripts/js/common.js", 
-                     "~/Scripts/js/hm.js", 
-                     "~/Scripts/js/home.js",
-                     "~/Scripts/js/activity.js",
-                     "~/Scripts/js/kalendar.js",
-                     "~/Scripts/js/page.js",
-                     "~/Scripts/js/responsiveslides.min.js",
-                     "~/Scripts/js/slider/js"
-                     ));
+            bundles.Add(new ScriptBundle("~/bundles/jquery").Include("~/Scripts/js/jquery-1.8.3.min.js"));
+            bundles.Add(new ScriptBundle("~/bundles/bdSlide").Include("~/Scripts/js/bdSlide.js"));
+            bundles.Add(new ScriptBundle("~/bundles/ck").Include("~/Scripts/js/ck.js"));
+            bundles.Add(new ScriptBundle("~/bundles/common").Include("~/Scripts/js/common.js"));
+            bundles.Add(new ScriptBundle("~/bundles/hm").Include("~/Scripts/js/hm.js"));
+            bundles.Add(new ScriptBundle("~/bundles/home").Include("~/Scripts/js/home.js"));
+            bundles.Add(new ScriptBundle("~/bundles/ck").Include("~/Scripts/js/ck.js"));
+            bundles.Add(new ScriptBundle("~/bundles/active").Include("~/Scripts/js/activity.js"));
+            bundles.Add(new ScriptBundle("~/bundles/active2").Include("~/Scripts/js/activity_02.js"));
+            bundles.Add(new ScriptBundle("~/bundles/page").Include("~/Scripts/js/page.js"));
+            bundles.Add(new ScriptBundle("~/bundles/kalendar").Include("~/Scripts/js/kalendar.js"));
+            bundles.Add(new ScriptBundle("~/bundles/responsiveslides.min").Include("~/Scripts/js/responsiveslides.min.js"));
+            bundles.Add(new ScriptBundle("~/bundles/slider").Include("~/Scripts/js/slider.js"));
+        
 
         }
     }
