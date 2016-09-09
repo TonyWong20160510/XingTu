@@ -1,0 +1,60 @@
+﻿@{
+    ViewBag.Title = "公司介绍";
+    Layout = "~/Views/Shared/_main.cshtml";
+}
+
+<script type="text/javascript">
+    $(function () {
+        $(".gsjs_content ul li").click(function () {
+            var t_index = $(this).index(); //获取当前块级的第几个
+            $(this).addClass("gsjs_content_nav_on").siblings().removeClass("gsjs_content_nav_on");
+            var obj = $(this).parent(".gsjs_content ul").parent(".gsjs_content").find(".introduce_cont");
+            obj.hide();
+            obj.eq(t_index).show();
+        })
+    })
+</script>
+
+<div class="bdBannerWrap">
+    <img src="~/Content/img/banner_04.jpg" width="100%">
+</div>
+<div class="gsjs_content">
+    <ul>
+        <li class="gsjs_content_nav_on"><a href="#">关于我们</a></li>
+        <li><a href="#">公司动态</a></li>
+        <li><a href="#">行业新闻</a></li>
+    </ul>
+    <div class="introduce_cont" style="display:block;">
+        <h1>关于我们</h1>
+        <p>
+            北京行途旅游咨询有限公司成立于2016年7月，注册资本金900万元人民币，公司以“行天下，途快乐”为服务理念，“客户至上，诚信至上”为服务宗旨，致力于打造中国最大的文化旅游平台，将民族风情与历史文化融入旅游，让人们在旅游的同时感受民族文化，弘扬民族文化，传承民族文化。<br>
+            <br>
+            <span>公司名称：北京行途旅游咨询有限公司</span><br>
+            邮箱：379779802@qq.com<br>
+            电话：13520038688
+        </p>
+        <p><img src="demo/img/company_01.jpg"><img src="demo/img/company_02.jpg"><img src="demo/img/company_03.jpg"><img src="demo/img/company_04.jpg"></p>
+    </div>
+
+    <div class="introduce_cont">
+        <h1>公司动态</h1>
+        <p>
+            北京行途旅游咨询有限公司成立于2016年7月，注册资本金900万元人民币，公司以“行天下，途快乐”为服务理念，“客户至上，诚信至上”为服务宗旨，致力于打造中国最大的文化旅游平台，将民族风情与历史文化融入旅游，让人们在旅游的同时感受民族文化，弘扬民族文化，传承民族文化。<br>
+            <br>
+            <span>公司名称：北京行途旅游咨询有限公司</span><br>
+            邮箱：379779802@qq.com<br>
+            电话：13520038688
+        </p>
+    </div>
+    <div class="introduce_cont">
+        <h1>行业新闻 </h1>
+        <p>
+            北京行途旅游咨询有限公司成立于2016年7月，注册资本金900万元人民币，公司以“行天下，途快乐”为服务理念，“客户至上，诚信至上”为服务宗旨，致力于打造中国最大的文化旅游平台，将民族风情与历史文化融入旅游，让人们在旅游的同时感受民族文化，弘扬民族文化，传承民族文化。<br>
+            <br>
+            <span>公司名称：北京行途旅游咨询有限公司</span><br>
+            邮箱：379779802@qq.com<br>
+            电话：13520038688
+        </p>
+    </div>
+
+</div>

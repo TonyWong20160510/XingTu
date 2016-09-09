@@ -1,0 +1,452 @@
+﻿@{
+    ViewBag.Title = "会员专区";
+    Layout = "~/Views/Shared/_Main.cshtml";
+}
+
+
+<div class="bdBannerWrap" style="z-index:0 !important;"> <img src="~/Content/img/banner_05.jpg" width="100%" style="z-index:0 !important;"> </div>
+<div class="hyzq_content">
+    <div class="data">
+        <div class="hyaq_nav">
+            <ul>
+                <li><a href="#">会员账户</a></li>
+                <li><a href="#">会员部落</a></li>
+                <li><a href="#">会员活动</a></li>
+                <li><a href="#">会员积分</a></li>
+                <li><a href="#">会员站内信</a></li>
+                <li><a href="#">会员分享</a></li>
+                <div style="clear:both;"></div>
+            </ul>
+        </div>
+        <div class="data_left">
+            <img src="~/Content/img/head_02.jpg" class="data_haed">
+            <div class="data_data">
+                <h4>ALEX_阿克<small><a href="#">【修改个人资料】</a></small></h4>
+                <ul>
+                    <li style="background:url(~/Content/img/icon_012.png) no-repeat left center;">推荐人数：50人 </li>
+                    <li style="background:url(~/Content/img/icon_013.png) no-repeat left center;">会员积分：5000 </li>
+                    <li style="background:url(~/Content/img/icon_014.png) no-repeat left center;">账户余额：1254878.00</li>
+                </ul>
+            </div>
+        </div>
+        <div class="data_right">
+            <input type="submit" value="" class="data_btn_01">
+            <input type="submit" value="旅行攻略" class="data_btn_02">
+            <input type="submit" value="剩余次数" class="data_btn_02">
+            <input type="submit" value="会员活动" class="data_btn_02">
+        </div>
+        <div style="clear:both;"></div>
+    </div>
+    <div class="calendar">
+        <h2>会员日历<small>Member calendar</small></h2>
+        <div id="wrap">
+            <table id="kalendar">
+                <tbody>
+                    <tr id="select">
+                        <td colspan="7">
+                            <div id="year">
+                                <ul>
+                                    <li>
+                                        <input type="button" id="yearPrev" value="<">
+                                    </li>
+                                    <li class="selectChange">
+                                        <select name="year">
+                                            <option value="1970">1970</option>
+                                            <option value="1971">1971</option>
+                                            <option value="1972">1972</option>
+                                            <option value="1973">1973</option>
+                                            <option value="1974">1974</option>
+                                            <option value="1975">1975</option>
+                                            <option value="1976">1976</option>
+                                            <option value="1977">1977</option>
+                                            <option value="1978">1978</option>
+                                            <option value="1979">1979</option>
+                                            <option value="1980">1980</option>
+                                            <option value="1981">1981</option>
+                                            <option value="1982">1982</option>
+                                            <option value="1983">1983</option>
+                                            <option value="1984">1984</option>
+                                            <option value="1985">1985</option>
+                                            <option value="1986">1986</option>
+                                            <option value="1987">1987</option>
+                                            <option value="1988">1988</option>
+                                            <option value="1989">1989</option>
+                                            <option value="1990">1990</option>
+                                            <option value="1991">1991</option>
+                                            <option value="1992">1992</option>
+                                            <option value="1993">1993</option>
+                                            <option value="1994">1994</option>
+                                            <option value="1995">1995</option>
+                                            <option value="1996">1996</option>
+                                            <option value="1997">1997</option>
+                                            <option value="1998">1998</option>
+                                            <option value="1999">1999</option>
+                                            <option value="2000">2000</option>
+                                            <option value="2001">2001</option>
+                                            <option value="2002">2002</option>
+                                            <option value="2003">2003</option>
+                                            <option value="2004">2004</option>
+                                            <option value="2005">2005</option>
+                                            <option value="2006">2006</option>
+                                            <option value="2007">2007</option>
+                                            <option value="2008">2008</option>
+                                            <option value="2009">2009</option>
+                                            <option value="2010">2010</option>
+                                            <option value="2011">2011</option>
+                                            <option value="2012">2012</option>
+                                            <option value="2013">2013</option>
+                                            <option value="2014">2014</option>
+                                            <option value="2015">2015</option>
+                                            <option value="2016" selected="true">2016</option>
+                                            <option value="2017">2017</option>
+                                            <option value="2018">2018</option>
+                                            <option value="2019">2019</option>
+                                            <option value="2020">2020</option>
+                                            <option value="2021">2021</option>
+                                            <option value="2022">2022</option>
+                                            <option value="2023">2023</option>
+                                            <option value="2024">2024</option>
+                                            <option value="2025">2025</option>
+                                            <option value="2026">2026</option>
+                                        </select>
+                                    </li>
+                                    <li>
+                                        <input type="button" id="yearNext" value=">" style="margin-left:20px !important;">
+                                    </li>
+                                </ul>
+                            </div>
+                            <div id="month">
+                                <ul>
+                                    <li>
+                                        <input type="button" id="monthPrev" value="<">
+                                    </li>
+                                    <li class="selectChange">
+                                        <select name="year">
+                                            <option value="0">一月</option>
+                                            <option value="1">二月</option>
+                                            <option value="2">三月</option>
+                                            <option value="3">四月</option>
+                                            <option value="4">五月</option>
+                                            <option value="5">六月</option>
+                                            <option value="6">七月</option>
+                                            <option value="7" selected="true">八月</option>
+                                            <option value="8">九月</option>
+                                            <option value="9">十月</option>
+                                            <option value="10">十一月</option>
+                                            <option value="11">十二月</option>
+                                        </select>
+                                    </li>
+                                    <li>
+                                        <input type="button" id="monthNext" value=">">
+                                    </li>
+                                </ul>
+                            </div>
+                            <div id="time"> </div>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td colspan="7">
+                            <ul class="">
+                                <div class="day_top">
+                                    <li></li>
+                                    <li>1</li>
+                                    <li>2</li>
+                                    <li>3</li>
+                                    <li>4</li>
+                                    <li>5</li>
+                                    <li>6</li>
+                                    <li>7</li>
+                                    <li>8</li>
+                                    <li>9</li>
+                                    <li>10</li>
+                                    <li>11</li>
+                                    <li>12</li>
+                                    <li>13</li>
+                                    <li>14</li>
+                                    <li>15</li>
+                                    <li>16</li>
+                                    <li>17</li>
+                                    <li>18</li>
+                                    <li>19</li>
+                                </div>
+                                <div class="day_bottom">
+                                    <li class="today">20</li>
+                                    <li class="today">21</li>
+                                    <li class="today">22</li>
+                                    <li class="weekend">23</li>
+                                    <li class="weekend">24</li>
+                                    <li class="weekend">25</li>
+                                    <li class="todayWeekend">26</li>
+                                    <li class="todayWeekend">27</li>
+                                    <li class="todayWeekend">28</li>
+                                    <li>29</li>
+                                    <li>30</li>
+                                    <li>31</li>
+                                    <li></li>
+                                    <li></li>
+                                    <li></li>
+                                    <li></li>
+                                    <li></li>
+                                    <li></li>
+                                    <li></li>
+                                    <li></li>
+                                    <li></li>
+                                    <li></li>
+                                </div>
+                            </ul>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <ul class="xia_icon">
+            <li><img src="~/Content/img/flag_02.png">推荐会员</li>
+            <li><b style="background:#e67e95;"></b>旅行前</li>
+            <li><b style="background:#7fd0fb;"></b>在旅行</li>
+            <li><b style="background:#aacf05;"></b>旅行后</li>
+            <div style="clear:both;"></div>
+        </ul>
+    </div>
+    <div class="account">
+        <h2>会员账户<small>Member account</small></h2>
+        <div class="account_cont">
+            <ul class="situation">
+                <li style=" border-bottom:1px dashed #bfb5b4;">
+                    <h3>人数情况<small>Number of cases</small></h3>
+                    <img src="~/Content/img/icon_015.png">
+                </li>
+                <li>
+                    <h3>资金情况<small>Financial situation</small></h3>
+                    <img src="~/Content/img/icon_016.png">
+                </li>
+            </ul>
+            <ul class="classify">
+                <li style="height:93px; line-height:93px;">人员总数</li>
+                <li style="height:93px; line-height:93px;">直推人数</li>
+                <li>资金总额</li>
+                <li>账户余额</li>
+                <li style=" border-bottom:none">可提现金额</li>
+            </ul>
+            <ul class="quantity">
+                <li style="height:93px; line-height:93px;">200人</li>
+                <li style="height:93px; line-height:93px;">50人</li>
+                <li>2000.00元</li>
+                <li>5000.00元</li>
+                <li style=" border-bottom:none">
+                    5000.00元
+                    <input type="submit" value="马上提现">
+                </li>
+            </ul>
+            <div style="clear:both;"></div>
+        </div>
+    </div>
+    <div class="tribe">
+        <h2>会员部落<small>Member tribe</small></h2>
+        <div class="tribe_cont">
+            <h3>推荐记录</h3>
+            <table width="1170" border="0" cellspacing="0" cellpadding="0">
+                <tr class="tribe_table_title">
+                    <td width="76">层数</td>
+                    <td width="84">应有人数</td>
+                    <td width="84">实际人数</td>
+                    <td style="text-align:left; padding-left:14px;">名称</td>
+                </tr>
+                <tr class="tribe_table_top">
+                    <td style="text-align:center;">第一层</td>
+                    <td style="text-align:center;">2</td>
+                    <td style="text-align:center;">2</td>
+                    <td style="color:#fc0130;"><span>李**</span><span>丁**</span></td>
+                </tr>
+                <tr class="tribe_table_top">
+                    <td style="text-align:center;">第二层</td>
+                    <td style="text-align:center;">4</td>
+                    <td style="text-align:center;">4</td>
+                    <td><span>赵**</span><span>张**</span><span>陈** </span><span>王**</span></td>
+                </tr>
+                <tr class="tribe_table_top">
+                    <td style="text-align:center;">第三层</td>
+                    <td style="text-align:center;">8</td>
+                    <td style="text-align:center;">8</td>
+                    <td><span>曹**</span><span>朱**</span><span style="color:#3b0af2;">尤勇 </span><span>许** </span><span>赵**</span><span>张**</span><span>陈**</span><span>王**</span></td>
+                </tr>
+                <tr class="tribe_table_top">
+                    <td style="text-align:center;">第四层</td>
+                    <td style="text-align:center;">16</td>
+                    <td style="text-align:center;">16</td>
+                    <td><span>曹**</span><span>朱**</span><span>尤**</span><span>许**</span><span>赵** </span><span>张**</span><span>陈**</span><span>王** </span> <span>曹**</span><span>朱**</span><span>尤**</span><span>许**</span><span>赵** </span><span>张**</span><span>陈**</span><span>王** </span></td>
+                </tr>
+                <tr class="tribe_table_top">
+                    <td style="text-align:center;"><i style="margin-bottom:33px;">第五层</i></td>
+                    <td style="text-align:center;"><i style="margin-bottom:33px;">32</i></td>
+                    <td style="text-align:center;"><i style="margin-bottom:33px;">32</i></td>
+                    <td><span>曹**</span><span>朱**</span><span>尤**</span><span>许**</span><span>赵** </span><span>张**</span><span>陈**</span><span>王** </span> <span>曹**</span><span>朱**</span><span>尤**</span><span>许**</span><span>赵** </span><span>张**</span><span>陈**</span><span>王** </span> <span>曹**</span><span>朱**</span><span>尤**</span><span>许**</span><span>赵** </span><span>张**</span><span>陈**</span><span>王** </span> <span>曹**</span><span>朱**</span><span>尤**</span><span>许**</span><span>赵** </span><span>张**</span><span>陈**</span><span>王** </span></td>
+                </tr>
+                <tr class="tribe_table_bottom">
+                    <td style="text-align:center;"><i style="margin-bottom:101px;">第六层</i></td>
+                    <td style="text-align:center;"><i style="margin-bottom:101px;">64</i></td>
+                    <td style="text-align:center;"><i style="margin-bottom:101px;">64</i></td>
+                    <td><span>曹**</span><span>朱**</span><span>尤**</span><span>许**</span><span>赵** </span><span>张**</span><span>陈**</span><span>王** </span> <span>曹**</span><span>朱**</span><span>尤**</span><span>许**</span><span>赵** </span><span>张**</span><span>陈**</span><span>王** </span> <span>曹**</span><span>朱**</span><span>尤**</span><span>许**</span><span>赵** </span><span>张**</span><span>陈**</span><span>王** </span> <span>曹**</span><span>朱**</span><span>尤**</span><span>许**</span><span>赵** </span><span>张**</span><span>陈**</span><span>王** </span> <span>曹**</span><span>朱**</span><span>尤**</span><span>许**</span><span>赵** </span><span>张**</span><span>陈**</span><span>王** </span> <span>曹**</span><span>朱**</span><span>尤**</span><span>许**</span><span>赵** </span><span>张**</span><span>陈**</span><span>王** </span> <span>曹**</span><span>朱**</span><span>尤**</span><span>许**</span><span>赵** </span><span>张**</span><span>陈**</span><span>王** </span> <span>曹**</span><span>朱**</span><span>尤**</span><span>许**</span><span>赵** </span><span>张**</span><span>陈**</span><span>王** </span></td>
+                </tr>
+                <tr class="tribe_table_bottom">
+                    <td style="text-align:center;"><i style="margin-bottom:237px;">第七层</i></td>
+                    <td style="text-align:center;"><i style="margin-bottom:237px;">128</i></td>
+                    <td style="text-align:center;"><i style="margin-bottom:237px;">128</i></td>
+                    <td><span>曹**</span><span>朱**</span><span>尤**</span><span>许**</span><span>赵** </span><span>张**</span><span>陈**</span><span>王** </span> <span>曹**</span><span>朱**</span><span>尤**</span><span>许**</span><span>赵** </span><span>张**</span><span>陈**</span><span>王** </span> <span>曹**</span><span>朱**</span><span>尤**</span><span>许**</span><span>赵** </span><span>张**</span><span>陈**</span><span>王** </span> <span>曹**</span><span>朱**</span><span>尤**</span><span>许**</span><span>赵** </span><span>张**</span><span>陈**</span><span>王** </span> <span>曹**</span><span>朱**</span><span>尤**</span><span>许**</span><span>赵** </span><span>张**</span><span>陈**</span><span>王** </span> <span>曹**</span><span>朱**</span><span>尤**</span><span>许**</span><span>赵** </span><span>张**</span><span>陈**</span><span>王** </span> <span>曹**</span><span>朱**</span><span>尤**</span><span>许**</span><span>赵** </span><span>张**</span><span>陈**</span><span>王** </span> <span>曹**</span><span>朱**</span><span>尤**</span><span>许**</span><span>赵** </span><span>张**</span><span>陈**</span><span>王** </span> <span>曹**</span><span>朱**</span><span>尤**</span><span>许**</span><span>赵** </span><span>张**</span><span>陈**</span><span>王** </span> <span>曹**</span><span>朱**</span><span>尤**</span><span>许**</span><span>赵** </span><span>张**</span><span>陈**</span><span>王** </span> <span>曹**</span><span>朱**</span><span>尤**</span><span>许**</span><span>赵** </span><span>张**</span><span>陈**</span><span>王** </span> <span>曹**</span><span>朱**</span><span>尤**</span><span>许**</span><span>赵** </span><span>张**</span><span>陈**</span><span>王** </span> <span>曹**</span><span>朱**</span><span>尤**</span><span>许**</span><span>赵** </span><span>张**</span><span>陈**</span><span>王** </span> <span>曹**</span><span>朱**</span><span>尤**</span><span>许**</span><span>赵** </span><span>张**</span><span>陈**</span><span>王** </span> <span>曹**</span><span>朱**</span><span>尤**</span><span>许**</span><span>赵** </span><span>张**</span><span>陈**</span><span>王** </span> <span>曹**</span><span>朱**</span><span>尤**</span><span>许**</span><span>赵** </span><span>张**</span><span>陈**</span><span>王** </span></td>
+                </tr>
+                <tr class="tribe_table_bottom">
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td><a href="#"><img src="~/Content/img/icon_017.png"> <b> 点击查看更多</b></a></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <div class="activity">
+        <h2>会员活动<small>Member account</small></h2>
+        <table width="1170" border="0" cellspacing="0" cellpadding="0">
+            <tr class="activity_title">
+                <td>活动名称</td>
+                <td>同行人员</td>
+                <td>出发地</td>
+                <td>出发时间</td>
+                <td>目的地</td>
+                <td>活动景点</td>
+                <td>交通方式</td>
+                <td>集合地点</td>
+            </tr>
+            <tr>
+                <td>稻城亚丁-最后的香格里拉</td>
+                <td><a href="#">查看详情</a></td>
+                <td>北京</td>
+                <td>2016.5.2</td>
+                <td>阿呗藏族自治州</td>
+                <td>稻城亚丁</td>
+                <td>飞机</td>
+                <td>成都指定酒店</td>
+            </tr>
+            <tr class="gray">
+                <td>稻城亚丁-最后的香格里拉</td>
+                <td><a href="#">查看详情</a></td>
+                <td>北京</td>
+                <td>2016.5.2</td>
+                <td>阿呗藏族自治州</td>
+                <td>稻城亚丁</td>
+                <td>飞机</td>
+                <td>成都指定酒店</td>
+            </tr>
+            <tr>
+                <td>稻城亚丁-最后的香格里拉</td>
+                <td><a href="#">查看详情</a></td>
+                <td>北京</td>
+                <td>2016.5.2</td>
+                <td>阿呗藏族自治州</td>
+                <td>稻城亚丁</td>
+                <td>飞机</td>
+                <td>成都指定酒店</td>
+            </tr>
+            <tr class="gray">
+                <td>稻城亚丁-最后的香格里拉</td>
+                <td><a href="#">查看详情</a></td>
+                <td>北京</td>
+                <td>2016.5.2</td>
+                <td>阿呗藏族自治州</td>
+                <td>稻城亚丁</td>
+                <td>飞机</td>
+                <td>成都指定酒店</td>
+            </tr>
+        </table>
+    </div>
+    <div class="points">
+        <h2>会员积分<small>Member points</small></h2>
+        <ul>
+            <li style="background:#e65a43;"><a href="#" style="background:url(~/Content/img/icon_018.png) no-repeat left center;">积分总数</a></li>
+            <li style="background:#6fbb63;"><a href="#" style="background:url(~/Content/img/icon_018.png) no-repeat left center;">积分记录</a></li>
+            <li style="background:#4586be;"><a href="#" style="background:url(~/Content/img/icon_018.png) no-repeat left center;">积分商城</a></li>
+            <li style="background:#fab455;"><a href="#" style="background:url(~/Content/img/icon_018.png) no-repeat left center;">积分兑换</a></li>
+            <div style="clear:both;"></div>
+        </ul>
+    </div>
+    <div class="mail">
+        <h2>站内信<small>Mail<a href="#">[+新建类别]</a></small></h2>
+        <table width="1170" border="0" cellspacing="0" cellpadding="0">
+            <tr class="mail_title">
+                <td style="padding-left:222px;">信息内容</td>
+                <td width="100" style="padding-left:24px;">时间</td>
+            </tr>
+            <tr>
+                <td><span><a href="#" style="color:#e65a43;">恭喜您已满1层，继续加油哦！</a></span></td>
+                <td>2016.7.22</td>
+            </tr>
+            <tr>
+                <td><span><a href="#" style="color:#6fbb63;">您参加的某某活动即将开始</a></span></td>
+                <td>2016.7.22</td>
+            </tr>
+            <tr>
+                <td><i><a href="#" style="color:#4586be;">行途网祝您节日快乐！</a></i></td>
+                <td>2016.7.22</td>
+            </tr>
+            <tr>
+                <td><i><a href="#" style="color:#6fbb63;">您参加的某某活动即将开始</a></i></td>
+                <td>2016.7.22</td>
+            </tr>
+            <tr>
+                <td><i><a href="#" style="color:#fab455;">恭喜您成功推荐一人，获得2积分的奖励！</a></i></td>
+                <td>2016.7.22</td>
+            </tr>
+            <tr>
+                <td><i><a href="#" style="color:#6fbb63;">您参加的某某活动即将开始</a></i></td>
+                <td>2016.7.22</td>
+            </tr>
+        </table>
+    </div>
+    <div class="share">
+        <h2>会员分享<small>Members share</small></h2>
+        <table width="1170" border="0" cellspacing="0" cellpadding="0">
+            <tr class="share_title">
+                <td style="padding-left:55px;">游记标题</td>
+                <td style="text-align:center;">积分奖励</td>
+                <td style="text-align:center;">状态</td>
+                <td style="text-align:center;">操作</td>
+            </tr>
+            <tr>
+                <td>
+                    <img src="~/Content/img/head_03.jpg">
+                    <div class="share_table_info">
+                        <h6>很久很久</h6>
+                        <p>创建于 2016-07-26<b>0</b><i>0</i><em>0</em></p>
+                    </div>
+                </td>
+                <td style="text-align:center;"><strong>0.00</strong></td>
+                <td style="text-align:center; color:#ff6600;">[审核不通过]</td>
+                <td style="text-align:center;"><a href="#">编辑</a><a href="#">删除</a></td>
+            </tr>
+            <tr>
+                <td>
+                    <img src="~/Content/img/head_03.jpg">
+                    <div class="share_table_info">
+                        <h6>很久很久</h6>
+                        <p>创建于 2016-07-26<b>0</b><i>0</i><em>0</em></p>
+                    </div>
+                </td>
+                <td style="text-align:center;"><strong>0.00</strong></td>
+                <td style="text-align:center; color:#837d7d;">待审核</td>
+                <td style="text-align:center;"><a href="#">编辑</a><a href="#">删除</a></td>
+            </tr>
+            <tr>
+                <td>
+                    <img src="~/Content/img/head_03.jpg">
+                    <div class="share_table_info">
+                        <h6>很久很久</h6>
+                        <p>创建于 2016-07-26<b>0</b><i>0</i><em>0</em></p>
+                    </div>
+                </td>
+                <td style="text-align:center;"><strong>0.00</strong></td>
+                <td style="text-align:center; color:#24ff00;">已发布</td>
+                <td style="text-align:center;"><a href="#">编辑</a><a href="#">删除</a></td>
+            </tr>
+        </table>
+    </div>
+</div>
+

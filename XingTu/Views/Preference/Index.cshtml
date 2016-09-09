@@ -1,0 +1,460 @@
+﻿@{
+    ViewBag.Title = "活动特惠";
+    Layout = "~/Views/Shared/_Main.cshtml";
+}
+
+ <!--searchBox begin -->
+<div class="searchBox">
+    <div class="innerSearch wrapper fn-pr clearfix">
+        <div class="fhdLogo fll"></div>
+        <div class="searchArea">
+            <div class="sfliter s_place fn-pr">
+                <div class="f"> <span class="p">全国</span> <span>出发</span> </div>
+                <b class="arrow deploy"></b>
+                <div class="fresult" style="display: none;">
+                    <div class="hotCity clearfix">
+                        <label>热门出发城市</label>
+                        <ul class="hotul">
+                            <li><a href="javascript:void(0);" data-city="全国">全国</a></li>
+                            <li><a href="javascript:void(0);" data-cid="2" data-city="北京">北京</a></li>
+                            <li><a href="javascript:void(0);" data-cid="25" data-city="上海">上海</a></li>
+                            <li><a href="javascript:void(0);" data-cid="10" data-city="河北">河北</a></li>
+                            <li><a href="javascript:void(0);" data-cid="26" data-city="四川">四川</a></li>
+                            <li><a href="javascript:void(0);" data-cid="27" data-city="天津">天津</a></li>
+                        </ul>
+                    </div>
+                    <div class="allCity tabs2">
+                        <div class="ac_tab clearfix">
+                            <ul>
+                                <li data-panel="#A" class="">ABFG</li>
+                                <li data-panel="#H" class="on">HJLN</li>
+                                <li data-panel="#O" class="">QST</li>
+                                <li data-panel="#W" class="">XYZ</li>
+                            </ul>
+                        </div>
+                        <div class="ac_box clearfix">
+                            <div class="hb1 tab-panel fn-none" style="display: none;">
+                                <dl>
+                                    <dt>A</dt>
+                                    <dd><a href="javascript:void(0);" data-cid="3" data-city="安徽">安徽</a><a href="javascript:void(0);" data-cid="34" data-city="澳门">澳门</a></dd>
+                                </dl>
+                                <dl>
+                                    <dt>B</dt>
+                                    <dd><a href="javascript:void(0);" data-cid="2" data-city="北京">北京</a></dd>
+                                </dl>
+                                <dl>
+                                    <dt>F</dt>
+                                    <dd><a href="javascript:void(0);" data-cid="4" data-city="福建">福建</a></dd>
+                                </dl>
+                                <dl>
+                                    <dt>G</dt>
+                                    <dd><a href="javascript:void(0);" data-cid="5" data-city="甘肃">甘肃</a><a href="javascript:void(0);" data-cid="6" data-city="广东">广东</a><a href="javascript:void(0);" data-cid="7" data-city="广西">广西</a><a href="javascript:void(0);" data-cid="8" data-city="贵州">贵州</a></dd>
+                                </dl>
+                            </div>
+                            <div class="hb1 tab-panel fn-none" style="display: block;">
+                                <dl>
+                                    <dt>H</dt>
+                                    <dd><a href="javascript:void(0);" data-cid="9" data-city="海南">海南</a><a href="javascript:void(0);" data-cid="10" data-city="河北">河北</a><a href="javascript:void(0);" data-cid="11" data-city="河南">河南</a><a href="javascript:void(0);" data-cid="12" data-city="黑龙江">黑龙江</a><a href="javascript:void(0);" data-cid="13" data-city="湖北">湖北</a><a href="javascript:void(0);" data-cid="14" data-city="湖南">湖南</a><a href="javascript:void(0);" data-cid="16503" data-city="海外">海外</a></dd>
+                                </dl>
+                                <dl>
+                                    <dt>J</dt>
+                                    <dd><a href="javascript:void(0);" data-cid="15" data-city="吉林">吉林</a><a href="javascript:void(0);" data-cid="16" data-city="江苏">江苏</a><a href="javascript:void(0);" data-cid="17" data-city="江西">江西</a></dd>
+                                </dl>
+                                <dl>
+                                    <dt>L</dt>
+                                    <dd><a href="javascript:void(0);" data-cid="18" data-city="辽宁">辽宁</a></dd>
+                                </dl>
+                                <dl>
+                                    <dt>N</dt>
+                                    <dd><a href="javascript:void(0);" data-cid="19" data-city="内蒙古">内蒙古</a><a href="javascript:void(0);" data-cid="20" data-city="宁夏">宁夏</a></dd>
+                                </dl>
+                            </div>
+                            <div class="hb1 tab-panel fn-none" style="display: none;">
+                                <dl>
+                                    <dt>Q</dt>
+                                    <dd><a href="javascript:void(0);" data-cid="21" data-city="青海">青海</a></dd>
+                                </dl>
+                                <dl>
+                                    <dt>S</dt>
+                                    <dd><a href="javascript:void(0);" data-cid="22" data-city="山东">山东</a><a href="javascript:void(0);" data-cid="23" data-city="山西">山西</a><a href="javascript:void(0);" data-cid="24" data-city="陕西">陕西</a><a href="javascript:void(0);" data-cid="25" data-city="上海">上海</a><a href="javascript:void(0);" data-cid="26" data-city="四川">四川</a></dd>
+                                </dl>
+                                <dl>
+                                    <dt>T</dt>
+                                    <dd><a href="javascript:void(0);" data-cid="27" data-city="天津">天津</a><a href="javascript:void(0);" data-cid="35" data-city="台湾">台湾</a></dd>
+                                </dl>
+                            </div>
+                            <div class="hb1 tab-panel fn-none" style="display: none;">
+                                <dl>
+                                    <dt>X</dt>
+                                    <dd><a href="javascript:void(0);" data-cid="28" data-city="西藏">西藏</a><a href="javascript:void(0);" data-cid="29" data-city="新疆">新疆</a><a href="javascript:void(0);" data-cid="33" data-city="香港">香港</a></dd>
+                                </dl>
+                                <dl>
+                                    <dt>Y</dt>
+                                    <dd><a href="javascript:void(0);" data-cid="30" data-city="云南">云南</a></dd>
+                                </dl>
+                                <dl>
+                                    <dt>Z</dt>
+                                    <dd><a href="javascript:void(0);" data-cid="31" data-city="浙江">浙江</a><a href="javascript:void(0);" data-cid="32" data-city="重庆">重庆</a></dd>
+                                </dl>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!--<script>
+                              $(function(){
+                                  $.ajax({
+                                      type: "GET",
+                                      url: "http://search.lvye.com/event/search/cities.shtml",
+                                      success: function(data){
+                                          $('.s_place').append(data);
+                                      }
+                                  })
+                              })
+                          </script>-->
+            </div>
+            <div class="sfliter s_type fn-pr" id="search-leader-type">
+                <div class="f"> <span class="p" type="1">按领队搜索</span> </div>
+                <b class="arrow deploy"></b>
+                <div class="fresult" style="display: none;">
+                    <p type="0">按活动搜索</p>
+                </div>
+
+            </div>
+            <form method="get" action="" class="search_bar" id="eventSearchForm">
+                <input type="hidden" name="searchType" value="1">
+                <input type="text" name="keyword" id="searchKeyword" placeholder="请输入目的地、景点等关键词" value="">
+                <input type="submit" value="搜索" id="submit-btn">
+            </form>
+        </div>
+        <div class="hotkeywords fn-pa">
+            <label>热门关键词：</label>
+            <ul>
+                <li><a href="#">新疆</a></li>
+                <li><a href="#">青海湖</a></li>
+                <li><a href="#">呼伦贝尔</a></li>
+                <li><a href="#">长白山</a></li>
+            </ul>
+            <!--<script>
+                        $(function(){
+                            $.ajax({
+                                type: "get",
+                                url: "http://search.lvye.com/event/search/hotword.shtml",
+                                success: function(data){
+                                    var redata = data.data;
+                                    var $tmp;
+                                    var $box = $('.hotkeywords ul');
+                                    for(var i = 0;i < redata.length; i++) {
+                                        $tmp = "<li><a href='http://search.lvye.com/event/search.jhtml?keyword=" + redata[i].hotWord + "'>"+ redata[i].hotWord +"</a></li>";
+                                        $box.append($tmp);								}
+                                }
+                            })
+                        })
+                    </script>-->
+        </div>
+    </div>
+</div>
+
+<!--searchBox end-->
+<div class="slide_container">
+    <ul class="rslides" id="slider">
+        <li>
+            <img src="~/Content/img/small_banner_01.jpg" alt="">
+            <p class="caption">报名|2016全球经营丛林穿越挑战赛</p>
+        </li>
+        <li>
+            <img src="~/Content/img/small_banner_02.jpg" alt="">
+            <p class="caption">待处理...</p>
+        </li>
+        <li>
+            <img src="~/Content/img/small_banner_03.jpg" alt="">
+            <p class="caption">待处理...</p>
+        </li>
+    </ul>
+</div>
+
+<div class="activity_content">
+    <div class="tLeft">
+        <h3 class="tjIcon">古建</h3>
+        <div class="hdList">
+            <ul class="hdList-p" style="width:900px;">
+                <li>
+                    <a href="#"><img src="~/Content/images/xl1.jpg" width="195" height="130" alt=""></a>
+                    <div class="d">
+                        <a class="t" href="#">心泊青海  塔尔寺 茶卡盐湖 青海湖 祁连 门源 双卧七日游 </a>
+                        <div class="i"> <a href="#"><span class="na">会飞的猫咪</span></a> <span class="ti">09.10</span> </div>
+                    </div>
+                </li>
+                <li>
+                    <a href="#"><img src="~/Content/images/xl2.jpg" width="195" height="130" alt=""></a>
+                    <div class="d">
+                        <a class="t" href="#" target="_blank">爱上伊犁草原风 火洲吐鲁番 赛里木湖 喀拉峻 库尔德宁 那拉提草原 双卧10日</a>
+                        <div class="i"> <a href="#" target="_blank"><span class="na">i大果粒</span></a> <span class="ti">9.17</span> </div>
+                    </div>
+                </li>
+                <li>
+                    <a href="#" target="_blank"><img src="~/Content/images/xl3.jpg" width="195" height="130" alt=""></a>
+                    <div class="d">
+                        <a class="t" href="#">邂逅甘青情 大美青海 塔尔寺 青海湖 茶卡盐湖 多彩甘肃 </a>
+                        <div class="i"> <a href="#"><span class="na"> i大果粒</span></a> <span class="ti">10.02</span> </div>
+                    </div>
+                </li>
+                <li>
+                    <a href="#"><img src="~/Content/images/xl4.jpg" width="195" height="130" alt=""></a>
+                    <div class="d">
+                        <a class="t" href="#">吉林、魔界风景区、长白山西北双坡连游、双卧5日</a>
+                        <div class="i"> <a href="#"><span class="na"> 进进01</span></a> <span class="ti">10.01</span> </div>
+                    </div>
+                </li>
+                <li>
+                    <a href="#"><img src="~/Content/images/xl5.jpg" width="195" height="130" alt=""></a>
+                    <div class="d">
+                        <a class="t" href="#">《狼图腾》《万物生长》拍摄地自驾6日游</a>
+                        <div class="i"> <a href="#"><span class="na"> 苏阳 </span></a> <span class="ti">08.13</span> </div>
+                    </div>
+                </li>
+                <li>
+                    <a href="#" target="_blank"><img src="~/Content/images/xl6.jpg" width="195" height="130" alt=""></a>
+                    <div class="d">
+                        <a class="t" href="#" target="_blank">白洋淀休闲游荷花大观园</a>
+                        <div class="i"> <a href="#"><span class="na"> 娜你呢 </span></a> <span class="ti">08.07</span> </div>
+                    </div>
+                </li>
+                <li>
+                    <a href="#" target="_blank"><img src="~/Content/images/xl7.jpg" width="195" height="130" alt=""></a>
+                    <div class="d">
+                        <a class="t" href="#" target="_blank">古北水镇,一个能满足“北方游客看水镇，南方游客登长城</a>
+                        <div class="i"> <a href="#"><span class="na"> 娜你呢 </span></a> <span class="ti">08.07</span> </div>
+                    </div>
+                </li>
+                <li>
+                    <a href="#" target="_blank"><img src="~/Content/images/xl8.jpg" width="195" height="130" alt=""></a>
+                    <div class="d">
+                        <a class="t" href="#" target="_blank">塞上江南 银川 沙坡头 沙湖 影视城 贺兰山岩画风情盛览双卧4日游</a>
+                        <div class="i"> <a href="#"><span class="na"> 娜你呢 </span></a> <span class="ti">08.07</span> </div>
+                    </div>
+                </li>
+            </ul>
+
+        </div>
+    </div>
+    <div class="tRight">
+        <a href="#"><img src="~/Content/img/act_01 (1).jpg" width="270" height="480" alt=""></a>
+    </div>
+    <div style="clear:both;"></div>
+</div>
+
+<div class="activity_content">
+    <div class="tLeft">
+        <h3 class="tjIcon">自然风貌</h3>
+        <div class="hdList">
+            <ul class="hdList-p" style="width:900px;">
+                <li>
+                    <a href="#"><img src="~/Content/images/xl1.jpg" width="195" height="130" alt=""></a>
+                    <div class="d">
+                        <a class="t" href="#">心泊青海  塔尔寺 茶卡盐湖 青海湖 祁连 门源 双卧七日游 </a>
+                        <div class="i"> <a href="#"><span class="na">会飞的猫咪</span></a> <span class="ti">09.10</span> </div>
+                    </div>
+                </li>
+                <li>
+                    <a href="#"><img src="~/Content/images/xl2.jpg" width="195" height="130" alt=""></a>
+                    <div class="d">
+                        <a class="t" href="#" target="_blank">爱上伊犁草原风 火洲吐鲁番 赛里木湖 喀拉峻 库尔德宁 那拉提草原 双卧10日</a>
+                        <div class="i"> <a href="#" target="_blank"><span class="na">i大果粒</span></a> <span class="ti">9.17</span> </div>
+                    </div>
+                </li>
+                <li>
+                    <a href="#" target="_blank"><img src="~/Content/images/xl3.jpg" width="195" height="130" alt=""></a>
+                    <div class="d">
+                        <a class="t" href="#">邂逅甘青情 大美青海 塔尔寺 青海湖 茶卡盐湖 多彩甘肃 </a>
+                        <div class="i"> <a href="#"><span class="na"> i大果粒</span></a> <span class="ti">10.02</span> </div>
+                    </div>
+                </li>
+                <li>
+                    <a href="#"><img src="~/Content/images/xl4.jpg" width="195" height="130" alt=""></a>
+                    <div class="d">
+                        <a class="t" href="#">吉林、魔界风景区、长白山西北双坡连游、双卧5日</a>
+                        <div class="i"> <a href="#"><span class="na"> 进进01</span></a> <span class="ti">10.01</span> </div>
+                    </div>
+                </li>
+                <li>
+                    <a href="#"><img src="~/Content/images/xl5.jpg" width="195" height="130" alt=""></a>
+                    <div class="d">
+                        <a class="t" href="#">《狼图腾》《万物生长》拍摄地自驾6日游</a>
+                        <div class="i"> <a href="#"><span class="na"> 苏阳 </span></a> <span class="ti">08.13</span> </div>
+                    </div>
+                </li>
+                <li>
+                    <a href="#" target="_blank"><img src="~/Content/images/xl6.jpg" width="195" height="130" alt=""></a>
+                    <div class="d">
+                        <a class="t" href="#" target="_blank">白洋淀休闲游荷花大观园</a>
+                        <div class="i"> <a href="#"><span class="na"> 娜你呢 </span></a> <span class="ti">08.07</span> </div>
+                    </div>
+                </li>
+                <li>
+                    <a href="#" target="_blank"><img src="~/Content/images/xl7.jpg" width="195" height="130" alt=""></a>
+                    <div class="d">
+                        <a class="t" href="#" target="_blank">古北水镇,一个能满足“北方游客看水镇，南方游客登长城</a>
+                        <div class="i"> <a href="#"><span class="na"> 娜你呢 </span></a> <span class="ti">08.07</span> </div>
+                    </div>
+                </li>
+                <li>
+                    <a href="#" target="_blank"><img src="~/Content/images/xl8.jpg" width="195" height="130" alt=""></a>
+                    <div class="d">
+                        <a class="t" href="#" target="_blank">塞上江南 银川 沙坡头 沙湖 影视城 贺兰山岩画风情盛览双卧4日游</a>
+                        <div class="i"> <a href="#"><span class="na"> 娜你呢 </span></a> <span class="ti">08.07</span> </div>
+                    </div>
+                </li>
+            </ul>
+
+        </div>
+    </div>
+    <div class="tRight">
+        <a href="#"><img src="~/Content/img/act_01 (2).jpg" width="270" height="480" alt=""></a>
+    </div>
+    <div style="clear:both;"></div>
+</div>
+
+<div class="activity_content">
+    <div class="tLeft">
+        <h3 class="tjIcon">风俗文化</h3>
+        <div class="hdList">
+            <ul class="hdList-p" style="width:900px;">
+                <li>
+                    <a href="#"><img src="~/Content/images/xl1.jpg" width="195" height="130" alt=""></a>
+                    <div class="d">
+                        <a class="t" href="#">心泊青海  塔尔寺 茶卡盐湖 青海湖 祁连 门源 双卧七日游 </a>
+                        <div class="i"> <a href="#"><span class="na">会飞的猫咪</span></a> <span class="ti">09.10</span> </div>
+                    </div>
+                </li>
+                <li>
+                    <a href="#"><img src="~/Content/images/xl2.jpg" width="195" height="130" alt=""></a>
+                    <div class="d">
+                        <a class="t" href="#" target="_blank">爱上伊犁草原风 火洲吐鲁番 赛里木湖 喀拉峻 库尔德宁 那拉提草原 双卧10日</a>
+                        <div class="i"> <a href="#" target="_blank"><span class="na">i大果粒</span></a> <span class="ti">9.17</span> </div>
+                    </div>
+                </li>
+                <li>
+                    <a href="#" target="_blank"><img src="~/Content/images/xl3.jpg" width="195" height="130" alt=""></a>
+                    <div class="d">
+                        <a class="t" href="#">邂逅甘青情 大美青海 塔尔寺 青海湖 茶卡盐湖 多彩甘肃 </a>
+                        <div class="i"> <a href="#"><span class="na"> i大果粒</span></a> <span class="ti">10.02</span> </div>
+                    </div>
+                </li>
+                <li>
+                    <a href="#"><img src="~/Content/images/xl4.jpg" width="195" height="130" alt=""></a>
+                    <div class="d">
+                        <a class="t" href="#">吉林、魔界风景区、长白山西北双坡连游、双卧5日</a>
+                        <div class="i"> <a href="#"><span class="na"> 进进01</span></a> <span class="ti">10.01</span> </div>
+                    </div>
+                </li>
+                <li>
+                    <a href="#"><img src="~/Content/images/xl5.jpg" width="195" height="130" alt=""></a>
+                    <div class="d">
+                        <a class="t" href="#">《狼图腾》《万物生长》拍摄地自驾6日游</a>
+                        <div class="i"> <a href="#"><span class="na"> 苏阳 </span></a> <span class="ti">08.13</span> </div>
+                    </div>
+                </li>
+                <li>
+                    <a href="#" target="_blank"><img src="~/Content/images/xl6.jpg" width="195" height="130" alt=""></a>
+                    <div class="d">
+                        <a class="t" href="#" target="_blank">白洋淀休闲游荷花大观园</a>
+                        <div class="i"> <a href="#"><span class="na"> 娜你呢 </span></a> <span class="ti">08.07</span> </div>
+                    </div>
+                </li>
+                <li>
+                    <a href="#" target="_blank"><img src="~/Content/images/xl7.jpg" width="195" height="130" alt=""></a>
+                    <div class="d">
+                        <a class="t" href="#" target="_blank">古北水镇,一个能满足“北方游客看水镇，南方游客登长城</a>
+                        <div class="i"> <a href="#"><span class="na"> 娜你呢 </span></a> <span class="ti">08.07</span> </div>
+                    </div>
+                </li>
+                <li>
+                    <a href="#" target="_blank"><img src="~/Content/images/xl8.jpg" width="195" height="130" alt=""></a>
+                    <div class="d">
+                        <a class="t" href="#" target="_blank">塞上江南 银川 沙坡头 沙湖 影视城 贺兰山岩画风情盛览双卧4日游</a>
+                        <div class="i"> <a href="#"><span class="na"> 娜你呢 </span></a> <span class="ti">08.07</span> </div>
+                    </div>
+                </li>
+            </ul>
+
+        </div>
+    </div>
+    <div class="tRight">
+        <a href="#"><img src="~/Content/img/act_01 (1).jpg" width="270" height="480" alt=""></a>
+    </div>
+    <div style="clear:both;"></div>
+</div>
+
+<div class="activity_content">
+    <div class="tLeft">
+        <h3 class="tjIcon">待处理</h3>
+        <div class="hdList">
+            <ul class="hdList-p" style="width:900px;">
+                <li>
+                    <a href="#"><img src="~/Content/images/xl1.jpg" width="195" height="130" alt=""></a>
+                    <div class="d">
+                        <a class="t" href="#">心泊青海  塔尔寺 茶卡盐湖 青海湖 祁连 门源 双卧七日游 </a>
+                        <div class="i"> <a href="#"><span class="na">会飞的猫咪</span></a> <span class="ti">09.10</span> </div>
+                    </div>
+                </li>
+                <li>
+                    <a href="#"><img src="~/Content/images/xl2.jpg" width="195" height="130" alt=""></a>
+                    <div class="d">
+                        <a class="t" href="#" target="_blank">爱上伊犁草原风 火洲吐鲁番 赛里木湖 喀拉峻 库尔德宁 那拉提草原 双卧10日</a>
+                        <div class="i"> <a href="#" target="_blank"><span class="na">i大果粒</span></a> <span class="ti">9.17</span> </div>
+                    </div>
+                </li>
+                <li>
+                    <a href="#" target="_blank"><img src="~/Content/images/xl3.jpg" width="195" height="130" alt=""></a>
+                    <div class="d">
+                        <a class="t" href="#">邂逅甘青情 大美青海 塔尔寺 青海湖 茶卡盐湖 多彩甘肃 </a>
+                        <div class="i"> <a href="#"><span class="na"> i大果粒</span></a> <span class="ti">10.02</span> </div>
+                    </div>
+                </li>
+                <li>
+                    <a href="#"><img src="~/Content/images/xl4.jpg" width="195" height="130" alt=""></a>
+                    <div class="d">
+                        <a class="t" href="#">吉林、魔界风景区、长白山西北双坡连游、双卧5日</a>
+                        <div class="i"> <a href="#"><span class="na"> 进进01</span></a> <span class="ti">10.01</span> </div>
+                    </div>
+                </li>
+                <li>
+                    <a href="#"><img src="~/Content/images/xl5.jpg" width="195" height="130" alt=""></a>
+                    <div class="d">
+                        <a class="t" href="#">《狼图腾》《万物生长》拍摄地自驾6日游</a>
+                        <div class="i"> <a href="#"><span class="na"> 苏阳 </span></a> <span class="ti">08.13</span> </div>
+                    </div>
+                </li>
+                <li>
+                    <a href="#" target="_blank"><img src="~/Content/images/xl6.jpg" width="195" height="130" alt=""></a>
+                    <div class="d">
+                        <a class="t" href="#" target="_blank">白洋淀休闲游荷花大观园</a>
+                        <div class="i"> <a href="#"><span class="na"> 娜你呢 </span></a> <span class="ti">08.07</span> </div>
+                    </div>
+                </li>
+                <li>
+                    <a href="#" target="_blank"><img src="~/Content/images/xl7.jpg" width="195" height="130" alt=""></a>
+                    <div class="d">
+                        <a class="t" href="#" target="_blank">古北水镇,一个能满足“北方游客看水镇，南方游客登长城</a>
+                        <div class="i"> <a href="#"><span class="na"> 娜你呢 </span></a> <span class="ti">08.07</span> </div>
+                    </div>
+                </li>
+                <li>
+                    <a href="#" target="_blank"><img src="~/Content/images/xl8.jpg" width="195" height="130" alt=""></a>
+                    <div class="d">
+                        <a class="t" href="#" target="_blank">塞上江南 银川 沙坡头 沙湖 影视城 贺兰山岩画风情盛览双卧4日游</a>
+                        <div class="i"> <a href="#"><span class="na"> 娜你呢 </span></a> <span class="ti">08.07</span> </div>
+                    </div>
+                </li>
+            </ul>
+
+        </div>
+    </div>
+    <div class="tRight">
+        <a href="#"><img src="~/Content/img/act_01 (2).jpg" width="270" height="480" alt=""></a>
+    </div>
+    <div style="clear:both;"></div>
+</div>
+
+<div class="activity_content">

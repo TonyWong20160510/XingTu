@@ -1,0 +1,164 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>行途旅游网</title>
+    @Styles.Render("~/Content/xtCss")
+    @Scripts.Render("~/bundles/xtjs")
+</head>
+<body id="nv_portal" class="pg_index" onkeydown="if(event.keyCode==27) return false;">
+    <header class="header">
+        <div class="topbar">
+            <div class="inner-topbar clearfix">
+                <div class="loginout">
+                    <a href="#" onclick="showlogin();">登录</a>
+                    <span class="spacer">|</span>
+                    <a href="#">注册</a>
+                </div>
+            </div>
+        </div>
+        <div class="main-header clearfix">
+            <div class="inner-mheader clearfix">
+                <h1 class="logo">
+                    <a href="#" target="_blank">
+                        <img src="~/Content/img/logo.jpg" class="pngfix" title="首页" alt="首页" style="width: 186px;height: 65px;">
+                    </a>
+                </h1>
+                <div class="searchbar">
+                    <form class="searchform" id="commonSearchForm" method="get" action="" target="_blank">
+                        <input type="hidden" name="mod" id="scbar_mod" value="search" />
+                        <input type="hidden" name="ser1" value="activity" id="indexSearchTypeValue">
+                        <input type="hidden" name="formhash" value="6e7ebcf6" />
+                        <input type="hidden" name="srchtype" value="title">
+                        <input type="hidden" name="srhfid" value="0" />
+                        <input type="hidden" name="srhlocality" value="portal::index" />
+                        <input type="hidden" id="scbar_btn" name="searchsubmit" value="true">
+                        <div class="searchtype clearfix">
+                            <div id="searchselect">活动</div>
+                            <ul class="searchdrop" id="search_bar">
+                                <li data-searchtype="activity">活动</li>
+                                <li data-searchtype="lvxing">旅行</li>
+                                <li data-searchtype="article">文章</li>
+                                <li data-searchtype="forum">帖子</li>
+                                <li data-searchtype="user">用户</li>
+                                <li><a href="#" target="_blank">更多</a></li>
+                            </ul>
+                        </div>
+                        <input type="submit" id="search_submit_btn" class="submitbtn pngfix" value="搜索">
+                        <input type="text" name="q" id="serbox" class="searchinput" placeholder="输入目的地、景点名等关键词">
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </header>
+    <nav class="mainnav">
+        <ul class="clearfix" id="newnavi">
+            <li>
+                <a href = "/Home">首页</a>
+            </li>
+            <li>
+                <a href="/Introduction">公司介绍</a>
+                <dl class="navdrop"></dl>
+            </li>
+            <li>
+                <a href="/VIP">vip尊享</a>
+                <dl class="navdrop"></dl>
+            </li>
+            <li>
+                <a href="/Preference">会员特惠</a>
+                <dl class="navdrop"></dl>
+            </li>
+            <li>
+                <a href="/Activity">会员活动</a>
+                <dl class="navdrop"></dl>
+            </li>
+
+            <li>
+                <a href="/Share">会员分享</a><em></em>
+            </li>
+            <li>
+                <a href="/Zone">会员专区</a><em></em>
+            </li>
+            <li>
+                <a href="/IntegralMall">积分商城</a>
+            </li>
+            <li>
+                <a href="/Connection">联系我们</a>
+                <dl class="navdrop">
+                    <!--<dd><a href="#">人才招聘</a></dd>-->
+                </dl>
+            </li>
+        </ul>
+    </nav>
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+        <footer class="footer">
+            <div class="inner-footer clearfix">
+                <div class="footertop clearfix">
+                    <div class="footer-up clearfix">
+                        <ul class="footerlink clearfix">
+                            <li>
+                                <dl>
+                                    <dt class="dt1">关于我们</dt>
+                                    <dd>
+                                        <a href="#" target="_blank">行途简介</a>
+                                    </dd>
+                                    <dd>
+                                        <a href="#" target="_blank">企业文化</a>
+                                    </dd>
+                                    <dd>
+                                        <a href="#" target="_blank">联系我们</a>
+                                    </dd>
+                                    <dd>
+                                        <a href="#" target="_blank">加入我们</a>
+                                    </dd>
+                                    <dd>
+                                        <a href="#" target="_blank">广告与合作</a>
+                                    </dd>
+                                    <dd>
+                                        <a href="#" target="_blank">网站声明</a>
+                                    </dd>
+                                </dl>
+                            </li>
+                            <li>
+                                <dl>
+                                    <dt class="dt2">帮助中心</dt>
+                                    <dd><a href="#" target="_blank">新手入门</a></dd>
+                                    <dd><a href="#" target="_blank">账号问题</a></dd>
+                                    <dd><a href="#" target="_blank">问题投诉</a></dd>
+                                    <dd><a href="#" target="_blank">为什么参加行途活动</a></dd>
+                                </dl>
+                            </li>
+                            <li>
+                                <dl>
+                                    <dt class="dt3">实用工具</dt>
+                                    <dd><a href="#" target="_blank">网址导航</a></dd>
+                                    <dd><a href="#" target="_blank">网站地图</a></dd>
+                                    <dd><a href="#" target="_blank">领队申请</a></dd>
+                                </dl>
+                            </li>
+                            <li>
+                                <dl>
+                                    <dt class="dt4"></dt>
+                                    <dd class="dd4"><img src="~/Content/img/ewmicon.jpg" width="100" height="123" alt="" /></dd>
+                                </dl>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="footerbt">
+                    <p class="copyright">
+                        北京行途旅游咨询有限公司  京ICP证11111111号-1   电信业务审批[2003]字第32222号
+                    </p>
+                </div>
+            </div>
+        </footer>
+    </div>
+    
+</body>
+</html>
