@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System;
+using System.ComponentModel.DataAnnotations;
 
 namespace XingTu.Models
 {
@@ -58,6 +59,9 @@ namespace XingTu.Models
         [DataType(DataType.Password)]
         [Display(Name = "确认密码")]
         [Compare("Password", ErrorMessage = "密码和确认密码不匹配。")]
-        public string ConfirmPassword { get; set; }
+        public string ConfirmPassword { get; set; }        
+        [Required]
+        public string Introductor { get; set; }        
+     
     }
 }

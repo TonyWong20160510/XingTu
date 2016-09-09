@@ -72,3 +72,6 @@ E:\项目\行途\XingTu\XingTu\bin\zh-Hans\Microsoft.Owin.Security.MicrosoftAcco
 E:\项目\行途\XingTu\XingTu\obj\Debug\XingTu.csprojResolveAssemblyReference.cache
 E:\项目\行途\XingTu\XingTu\obj\Debug\XingTu.dll
 E:\项目\行途\XingTu\XingTu\obj\Debug\XingTu.pdb
+E:\项目\行途\XingTu\XingTu\obj\Debug\XingTu.Migrations.InitialCreate.resources
+E:\项目\行途\XingTu\XingTu\obj\Debug\XingTu.csproj.GenerateResource.Cache
+E:\项目\行途\XingTu\XingTu\obj\Debug\XingTu.Migrations.Initial.resources

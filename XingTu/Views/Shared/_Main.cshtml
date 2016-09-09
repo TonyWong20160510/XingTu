@@ -5,19 +5,38 @@
     <meta name="viewport" content="width=device-width" />
     <title>行途旅游网</title>
     @Styles.Render("~/Content/xtCss")
-    @*@Scripts.Render("~/bundles/xtjs")*@
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/layer")
 </head>
 <body id="nv_portal" class="pg_index" onkeydown="if(event.keyCode==27) return false;">
-    <header class="header">
-        <div class="topbar">
+    <header class="header">        
+        @using Microsoft.AspNet.Identity
+        @if (Request.IsAuthenticated)
+        {
+            using (Html.BeginForm("LogOff", "Account", FormMethod.Post, new { id = "logoutForm", @class = "topbar" }))
+            {
+                @Html.AntiForgeryToken()
+                <div class="inner-topbar clearfix">
+                    <div class="loginout">
+                        @Html.ActionLink("你好 " + User.Identity.GetUserName() + "!", "Manage", "Account", routeValues: null, htmlAttributes: new { title = "管理" })
+                        <a href="javascript:document.getElementById('logoutForm').submit()">注销</a>
+                    </div>                    
+                </div>
+            }
+        }
+        else
+        {
             <div class="inner-topbar clearfix">
                 <div class="loginout">
-                    <a href="#" onclick="showlogin();">登录</a>
+                    @*@Html.ActionLink("注册", "Register", "Account", routeValues: null, htmlAttributes: new { id = "registerLink" })*@
+                    <a id = "register" href = "#">注册</a>
                     <span class="spacer">|</span>
-                    <a href="#">注册</a>
+                    <a id="login" href="#">登陆</a>
+                    @*@Html.ActionLink("登录", "Login", "Account", routeValues: null, htmlAttributes: new { id = "loginLink" })*@
                 </div>
             </div>
-        </div>
+
+        }
         <div class="main-header clearfix">
             <div class="inner-mheader clearfix">
                 <h1 class="logo">
@@ -56,7 +75,7 @@
     <nav class="mainnav">
         <ul class="clearfix" id="newnavi">
             <li>
-                <a href = "/Home">首页</a>
+                <a href="/Home">首页</a>
             </li>
             <li>
                 <a href="/Introduction">公司介绍</a>
@@ -159,6 +178,78 @@
             </div>
         </footer>
     </div>
-    
+
 </body>
 </html>
+<style type="text/css">
+    .register-div {
+        margin: 0.5rem;
+        margin-left: 4.5rem;
+    }
+    .register-label {
+        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+        font-size: 14px;
+        line-height: 1.428571429;
+        color: #333333;
+        display: inline-block;
+        margin-bottom: 5px;
+        font-weight: bold;
+    }
+    .register-input {
+        width: 200px;
+        border-radius: 4px;
+        padding: 6px 12px;
+        line-height: 1.43;
+        color: #555555;
+        vertical-align: middle;
+        border: 1px solid #cccccc;
+        box-shadow: inset 0 1px 1px;
+        background-color: #ffffff;
+        transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+    }
+    .register-btn {
+        display: inline-block;
+        padding: 6px 12px;
+        margin-bottom: 0;
+        font-size: 14px;
+        font-weight: normal;
+        line-height: 1.428571429;
+        text-align: center;
+        white-space: nowrap;
+        vertical-align: middle;
+        cursor: pointer;
+        border: 1px solid transparent;
+        border-radius: 4px;
+        -webkit-user-select: none;
+        color: white;
+        background-color: #63B8FF;
+        /*border-color: #cccccc;*/
+    }
+</style>
+@* 这个方式以后需进行精简 *@
+<script type="text/javascript">
+    $("#register").on('click', function () {
+        layer.open({
+            type: 1, //page层
+            area: ['400px', '350px'],
+            title: '用户注册',
+            shade: 0.6, //遮罩透明度
+            moveType: 1, //拖拽风格，0是默认，1是传统拖动
+            shift: 1, //0-6的动画形式，-1不开启
+            content: '<form action="/Account/Register"" method="post" role="form" novalidate="novalidate"><input name="__RequestVerificationToken" type="hidden" value="ITq_rhhD4xI4GwCNftqraKSzJOe2660YJd9y2PCWGga9GkpOc7zGOMW6GlHvfLRSmTh3s_D82T0GLrudxCJH-9ui3Dk6PeumlaxzIFa_cjo1"><div class="validation-summary-valid" data-valmsg-summary="true"><ul><li style="display:none"></li></ul></div><div class="register-div"><label class="register-lable" for="UserName">用户名</label><div class="col-md-10"><input class="register-input" data-val="true" data-val-required="用户名 字段是必需的。" id="UserName" name="UserName" type="text" value=""></div></div><div class="register-div"><label class="register-lable" for="Password">密码</label><div class="col-md-10"><input class="register-input" data-val="true" data-val-length="密码 必须至少包含 6 个字符。" data-val-length-max="100" data-val-length-min="6" data-val-required="密码 字段是必需的。" id="Password" name="Password" type="password"></div></div><div class="register-div"><label class="register-lable" for="ConfirmPassword">确认密码</label><div class="col-md-10"><input class="register-input" data-val="true" data-val-equalto="“确认密码”和“密码”不匹配。" data-val-equalto-other="*.Password" id="ConfirmPassword" name="ConfirmPassword" type="password"></div></div>		<div class="register-div"><label class="register-lable" for="Introductor">介绍人</label><div class="col-md-10"><input class="register-input" data-val="true" data-val-required="Introductor 字段是必需的。" id="Introductor" name="Introductor" type="text" value=""></div></div><div class="register-div"><div class="col-md-offset-2 col-md-10"><input type="submit" class="register-btn" value="注册"></div></div></form>'
+        });
+    })
+
+    $("#login").on('click', function () {
+        layer.open({
+            type: 1, //page层
+            area: ['400px', '270px'],
+            title: '用户登陆',
+            shade: 0.6, //遮罩透明度
+            moveType: 1, //拖拽风格，0是默认，1是传统拖动
+            shift: 1, //0-6的动画形式，-1不开启
+            content: '<form action="/Account/Login" method="post" role="form" novalidate="novalidate"><input name="__RequestVerificationToken" type="hidden" value="H47U5CZmYwNdNeioC1ORnXJu66wm8Prd9h8RYzVfJkKtbkKxQAfW2QJ2slJV2XfY5NOupQ8YW3HxgHJETCFjGyLVQCTJDMhg4mIL38sBefE1"><div class="register-div"><label class="register-lable" for="UserName">用户名</label><div class="col-md-10">	<input class="register-input" data-val="true" data-val-required="用户名 字段是必需的。" id="UserName" name="UserName" type="text" value="">	<span class="field-validation-valid" data-valmsg-for="UserName" data-valmsg-replace="true"></span></div>	</div>	<div class="register-div"><label class="register-lable" for="Password">密码</label><div class="col-md-10">	<input class="register-input" data-val="true" data-val-required="密码 字段是必需的。" id="Password" name="Password" type="password">	<span class="field-validation-valid" data-valmsg-for="Password" data-valmsg-replace="true"></span></div>	</div>	<div class="register-div"><div class="col-md-offset-2 col-md-10">	<div class="checkbox"><input data-val="true" data-val-required="记住我? 字段是必需的。" id="RememberMe" name="RememberMe" type="checkbox" value="true"><input name="RememberMe" type="hidden" value="false"><label for="RememberMe">记住我?</label>	</div></div>	</div>	<div class="register-div"><div class="col-md-offset-2 col-md-10">	<input type="submit" value="登录" class="register-btn"></div>	</div></form>'
+        });
+    })
+    
+</script>

@@ -44,7 +44,8 @@ namespace XingTu
             bundles.Add(new ScriptBundle("~/bundles/responsiveslides.min").Include("~/Scripts/js/responsiveslides.min.js"));
             bundles.Add(new ScriptBundle("~/bundles/slider").Include("~/Scripts/js/slider.js"));
         
-
+            //插件
+            bundles.Add(new ScriptBundle("~/bundles/layer").Include("~/Plugins/layer/layer.js"));
         }
     }
 }
